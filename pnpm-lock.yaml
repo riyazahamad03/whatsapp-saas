@@ -29,12 +29,6 @@ importers:
 
   apps/landing:
     dependencies:
-      '@whatsapp-saas/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@whatsapp-saas/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       next:
         specifier: ^14.2.5
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
