@@ -1,23 +1,27 @@
-import Link from "next/link";
-import { Button, LayoutWrapper } from "@whatsapp-saas/ui";
+import { BulkModule } from "../components/landing/BulkModule";
+import { FinalCta } from "../components/landing/FinalCta";
+import { Footer } from "../components/landing/Footer";
+import { Hero } from "../components/landing/Hero";
+import { Logos } from "../components/landing/Logos";
+import { Nav } from "../components/landing/Nav";
+import { PortalModule } from "../components/landing/PortalModule";
+import { ReminderModule } from "../components/landing/ReminderModule";
+import { RoiModule } from "../components/landing/RoiModule";
+import { ServiceModule } from "../components/landing/ServiceModule";
 
 export default function HomePage() {
   return (
-    <LayoutWrapper className="landing-hero">
-      <header className="landing-hero-copy">
-        <span className="landing-eyebrow">WhatsApp SaaS</span>
-        <h1>Conversations that convert.</h1>
-        <p>
-          Skeleton landing page. Replace this with the real hero, features, and
-          marketing content. Each section can be developed by its owner.
-        </p>
-        <div className="landing-cta-row">
-          <Link href={process.env.NEXT_PUBLIC_WEB_APP_URL ?? "/"}>
-            <Button>Open the app</Button>
-          </Link>
-          <Button variant="secondary">Talk to sales</Button>
-        </div>
-      </header>
-    </LayoutWrapper>
+    <>
+      <Nav />
+      <Hero />
+      <Logos />
+      <BulkModule />
+      <ServiceModule />
+      <ReminderModule />
+      <PortalModule />
+      <RoiModule />
+      <FinalCta />
+      <Footer />
+    </>
   );
 }
